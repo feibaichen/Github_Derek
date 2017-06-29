@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<meta name="keywords"  content="" />
+	<meta name="description" content="" />
+
+	<style type="text/css">
+	body{margin:0;padding:0;}	
+	/*--site_head start--*/
+	.site_head{width: 100%;height: 110px;background-color:rgb(241,242,242);border-bottom:2px #FF0000 solid ;}
+	.site_head .logo_and_search{width: 1000px;height: 60px;margin: 0 auto;}
+	.site_head .logo_and_search .logo_pic{width: 100px;height: 40px;padding-top: 10px;float: left;}
+	.site_head .logo_and_search .search_tool{width: 390px;height: 35px;background-color: white;float: left;margin-top: 10px;margin-left: 180px;border: 1px solid #C0C0C0;}
+	.site_head .logo_and_search .search_tool .search_pic{width: 60px;height: 37px;background-color: red;margin-left: 331px;margin-top: -1px;}
+	.site_head .logo_and_search .denglu_and_yingyin{width: 295px;height: 50px;float: left;margin-top: 10px;margin-left: 30px;}
+	.site_head .logo_and_search .words_denglu_app_yingyin{color: gray;font-size: 12px; width: 295px;}
+	.nav_title{width: 1000px;height: 30px;margin: 0 auto;margin-top: 0px;line-height: 20px;}
+	.nav_title span{margin-left: 15px;font-size: 14px;}
+	.small_nav_show{width: 1000px;height:30px;margin: 0 auto;}
+
+	/*--site_middle start--*/
+	.site_middle{width: 100%;height: 4700px;background-color:white;}
+	.middle_top_part{width: 1000px;height: 470px;margin: 0 auto;border-bottom:1px solid #d0d0d0; }
+	.top_part_left{width: 550px;height:460px;float: left;}
+	.top_par_left_image{width: 550px;height: 285px;overflow: hidden;}
+	.top_par_left_image img:hover{width: 600px;height: 300px;margin: -5px -5px;}
+	.top_part_left .left_title{width: 255px;height:150px; float: left;margin-top: 20px;}
+
+	.top_part_left .left_title span{display: block;font-size: 12px;}
+	.top_part_left .right_title{width: 252px;height:150px; float: left;margin-top: 20px;margin-left: 40px;}
+	.top_part_left .right_title span{display: block;font-size: 12px;}
+
+	.top_part_middle{width: 170px;height:437px; float: left;margin-left: 20px;font-size: 14px;}
+	.top_part_right{width: 240px;height:437px;float: left;margin-left: 20px;}
+	.top_part_right span{float: left;font-size: 12px;}
+	
+	/*--site_middle 个人中心 start--*/
+	.Personal_core{width: 1000px;height:255px ;margin: 0 auto;border-bottom: 1px solid #d0d0d0;}
+	.Personal_core .Personal_core_left{width: 740px;height: 245px;float: left;}
+	.Personal_core .Personal_core_left .Personal_core_title{width: 740px;height:60px ;line-height: 80px;}
+	.Personal_core .Personal_core_left .Personal_core_title_images{width: 740px;height: 160px;margin-top: 10px;}
+	.Personal_core .Personal_core_left .Personal_core_title_images span{display: block;font-size: 14px;}
+	.Personal_core .Personal_core_title_images_right_part{width:240px ;height: 245px;float: left;margin-left: 20px;}
+	.Personal_core .Personal_core_title_images_right_part .title_jingpin{margin-top: 30px;}
+	.Personal_core .Personal_core_title_images_right_part .Personal_icon{width: 240px;height:20px; margin-top: 10px;font-size: 12px;}
+	.Personal_core .Personal_core_title_images_right_part .Personal_icon img{width:20px;height:20px;border-radius:10px;float: left;}
+	.Personal_core .Personal_core_title_images_right_part .Personal_icon img span{margin-left: 5px;}
+
+	/*tv_电视剧*/
+	.middle_tv_siers{height: 440px;width: 1000px; border-bottom: 1px solid #d0d0d0;margin: 0 auto;}
+	.middle_tv_siers_content_left{width: 740px;height:430px ;float: left;}
+	.middle_tv_siers_content_left_title{width: 740px;height: 60px;line-height: 60px;margin-top: 10px;}
+	.middle_tv_siers_content_left_images{width: 740px;height:370px; }
+	.middle_tv_siers_content_left_images .left_images{float: left;margin-left: 20px;}
+	.middle_tv_siers_content_left_images .left_images span{font-size: 12px;display: block;}
+	.middle_tv_siers_content_left_images .left_images .big_title{font-size: 14px;}
+	.middle_tv_siers_content_left_images .left_images .small_title{font-size: 12px;color: gray;}
+	.middle_tv_siers_content_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.tv_siers_content_right_big_title{margin-top:30px ;width: 240px;height:30px;line-height: 30px; }
+	.tv_siers_content_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.tv_siers_content_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.tv_siers_content_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.tv_siers_content_right_one_five .one_five img{float: left;}
+	.tv_siers_content_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.tv_siers_content_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.tv_siers_content_right_six_ten .six_ten img{float: left;}
+	.tv_siers_content_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.tv_siers_content_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.tv_siers_content_right_bottom div{float: left;margin-left: 15px;}
+	.tv_siers_content_right_bottom span{display: block;font-size: 14px;}
+	/*美剧*/
+	.middle_American_movie_tv{width:1000px;height: 430px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_American_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_American_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_American_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_American_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_American_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_American_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_American_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_American_movie_tv_right span{display: block;font-size:13px ;}
+	.middle_American_movie_tv_right div{float: left;margin-top: 30px;width:70px ;height: 150px;margin-left: 15px;}
+
+	/*韩剧*/
+	.middle_korea_movie_tv{width:1000px;height: 430px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_korea_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_korea_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_korea_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_korea_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_korea_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_korea_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_korea_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_korea_movie_tv_right span{display: block;font-size:13px ;}
+	
+	.middle_korea_movie_tv_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_korea_movie_tv_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_korea_movie_tv_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_korea_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;} .one_five img{float: left;}
+	.middle_korea_movie_tv_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.middle_korea_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_korea_movie_tv_right_six_ten .six_ten img{float: left;}
+	.middle_korea_movie_tv_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.middle_korea_movie_tv_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.middle_korea_movie_tv_right_bottom div{float: left;margin-left: 15px;}
+	.middle_korea_movie_tv_right_bottom span{display: block;font-size: 14px;}
+
+
+	/*动漫*/
+
+	.middle_dongman_movie_tv{width:1000px;height: 430px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_dongman_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_dongman_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_dongman_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_dongman_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_dongman_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_dongman_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_dongman_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_dongman_movie_tv_right span{display: block;font-size:13px ;}
+	
+	.middle_dongman_movie_tv_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_dongman_movie_tv_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_dongman_movie_tv_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_dongman_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;} .one_five img{float: left;}
+	.middle_dongman_movie_tv_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.middle_dongman_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_dongman_movie_tv_right_six_ten .six_ten img{float: left;}
+	.middle_dongman_movie_tv_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.middle_dongman_movie_tv_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.middle_dongman_movie_tv_right_bottom div{float: left;margin-left: 15px;}
+	.middle_dongman_movie_tv_right_bottom span{display: block;font-size: 14px;}
+
+	/*搜狐出品*/
+	.middle_souhuchupin_movie_tv{width:1000px;height: 430px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_souhuchupin_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_souhuchupin_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_souhuchupin_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_souhuchupin_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_souhuchupin_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_souhuchupin_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_souhuchupin_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_souhuchupin_movie_tv_right span{display: block;font-size:13px ;}
+	
+	.middle_souhuchupin_movie_tv_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_souhuchupin_movie_tv_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_souhuchupin_movie_tv_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_souhuchupin_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;} .one_five img{float: left;}
+	.middle_souhuchupin_movie_tv_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.middle_souhuchupin_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_souhuchupin_movie_tv_right_six_ten .six_ten img{float: left;}
+	.middle_souhuchupin_movie_tv_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.middle_souhuchupin_movie_tv_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.middle_souhuchupin_movie_tv_right_bottom div{float: left;margin-left: 15px;}
+	.middle_souhuchupin_movie_tv_right_bottom span{display: block;font-size: 14px;}
+
+	/*综艺*/
+	.middle_zongyi_movie_tv{width:1000px;height: 430px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_zongyi_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_zongyi_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_zongyi_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_zongyi_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_zongyi_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_zongyi_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_zongyi_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_zongyi_movie_tv_right span{display: block;font-size:13px ;}
+	
+	.middle_zongyi_movie_tv_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_zongyi_movie_tv_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_zongyi_movie_tv_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_zongyi_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;} .one_five img{float: left;}
+	.middle_zongyi_movie_tv_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.middle_zongyi_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_zongyi_movie_tv_right_six_ten .six_ten img{float: left;}
+	.middle_zongyi_movie_tv_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.middle_zongyi_movie_tv_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.middle_zongyi_movie_tv_right_bottom div{float: left;margin-left: 15px;}
+	.middle_zongyi_movie_tv_right_bottom span{display: block;font-size: 14px;}
+
+	/*sport体育*/
+	.middle_sport_movie_tv{width:1000px;height: 430px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_sport_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_sport_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_sport_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_sport_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_sport_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_sport_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_sport_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_sport_movie_tv_right span{display: block;font-size:13px ;}
+	
+	.middle_sport_movie_tv_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_sport_movie_tv_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_sport_movie_tv_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_sport_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;} .one_five img{float: left;}
+	.middle_sport_movie_tv_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.middle_sport_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_sport_movie_tv_right_six_ten .six_ten img{float: left;}
+	.middle_sport_movie_tv_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.middle_sport_movie_tv_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.middle_sport_movie_tv_right_bottom div{float: left;margin-left: 15px;}
+	.middle_sport_movie_tv_right_bottom span{display: block;font-size: 14px;}
+
+	/*电影*/
+
+	.middle_dianying_movie_tv{width:1000px;height: 660px;margin: 0 auto;border-bottom:1px solid #d0d0d0;}
+	.middle_dianying_movie_tv_left{width:740px;height: 420px;float: left;margin-top: 10px;}
+	.middle_dianying_movie_tv_right{width: 240px;height: 430px;float: left;margin-left: 20px;}
+	.middle_dianying_movie_tv_left_title span{width:740px ;height: 60px;margin-left: 20px;line-height: 60px;font-size: 14px;}
+	.middle_dianying_movie_tv_left_images{width: 740px;height:355px ;}
+	.middle_dianying_movie_tv_left_images div{float: left;margin-left: 20px;}
+	.middle_dianying_movie_tv_left_images div span{display: block;font-size: 14px;}
+	.middle_dianying_movie_tv_left_images .small_title{font-size: 13px;color: gray;margin-bottom: 30px;}
+	.middle_dianying_movie_tv_right span{display: block;font-size:13px ;}
+	
+	.middle_dianying_movie_tv_right_one_five{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_dianying_movie_tv_right_six_ten{width: 120px;height: 210px;float: left;border-bottom: 1px solid #d0d0d0;}
+	.middle_dianying_movie_tv_right_one_five .one_five{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_dianying_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;} .one_five img{float: left;}
+	.middle_dianying_movie_tv_right_one_five .one_five span{float: left;margin-left: 5px;}
+	.middle_dianying_movie_tv_right_six_ten .six_ten{width: 120px;height: 16px;margin-top: 20px;font-size: 14px;line-height: 16px;}
+	.middle_dianying_movie_tv_right_six_ten .six_ten img{float: left;}
+	.middle_dianying_movie_tv_right_six_ten .six_ten span{float: left;margin-left: 5px;}
+	.middle_dianying_movie_tv_right_bottom{width:240px ;height:110px ;float: left;margin-top: 10px;}
+	.middle_dianying_movie_tv_right_bottom div{float: left;margin-left: 15px;}
+	.middle_dianying_movie_tv_right_bottom span{display: block;font-size: 14px;}
+
+	/*广告*/
+	.middle_ads_one{margin: 0 auto;width: 1000px;height: 90px;margin-top:10px;}
+
+	/*--site_bottom start--*/
+	.site_bottom{width: 100%;height: 295px;}
+	.bottom_search{width:100% ;height: 40px;background-color: rgb(241,242,242);border-bottom: 1px solid #d0d0d0;border-top: 1px solid #d0d0d0;}
+	.bottom_serch_tool{margin: 0 auto;width: 390px;height: 35px;background-color: white;border:1px solid #d0d0d0;margin-top: 1px;}
+	.bottom_search_pic_img{background-color: red;width: 60px;height: 37px;margin-left: 330px;margin-top: -1px;}
+	.bottom_detail{width:100% ;height:125px ;border-bottom: 1px solid #d0d0d0;}
+	.bottom_detail_content{width: 1000px;height: 120px;margin: 0 auto;}
+	.bottom_detail_content div{width: 100px;height: 80px;float: left;margin-left: 15px;margin-top: 20px;}
+	.bottom_detail_content div span{display: block;font-size: 12px;}
+	.bottom_detail_content div .bottom_detail_content_big_title{font-size: 15px;margin-bottom: 10px;font-weight: bold;}
+	.bottom_copyright div{margin:0 auto ;width: 1000px;height: 30px;font-size: 12px;text-align: center;}
+
+
+	</style>
+	<script type="text/javascript">
+
+	</script>
+
+</head>
+<body>
+	<!--site_head start-->
+		<div class="site_head">
+			<div class="logo_and_search">
+				<div class="logo_pic"><img src="images/logo.gif"></div>
+				<div class="search_tool">
+					<div class="search_pic">
+						<img src="images/search.png" style="width:35px;height:35px;margin-left:15px;margin-top:3px;">
+					</div>
+				</div>
+				<div class="denglu_and_yingyin">
+					<div class="denglu_and_yingyin_images">
+						<img src="images/denglu.png" style="margin-left:30px;">
+						<img src="images/jilu.png" style="margin-left:40px;">
+						<img src="images/shangchuan.png" style="margin-left:30px;">
+						<img src="images/app.png" style="margin-left:30px;">
+						<img src="images/yingyin.png" style="margin-left:30px;">
+						<div class="words_denglu_app_yingyin">
+							<span style="margin-left:15px;">登录<span>&nbsp;|&nbsp;</span>注册</span>
+							<span style="margin-left:23px;">记录</span>
+							<span style="margin-left:31px;">上传</span>
+							<span style="margin-left:31px;">App</span>
+							<span style="margin-left:30px;">影音</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr style="border:1px #F5F5F5 solid;" />
+			<div class="nav_title">
+				<span style="margin-left:0px;">首页</span>
+				<span>电视剧</span>
+				<span>电影</span>
+				<span>动漫</span>
+				<span>综艺</span>
+				<span>娱乐播报</span>
+				<span>体育电竞</span>
+				<span>新闻</span>
+				<span>纪录片</span>
+				<span>搜狐出品</span>
+				<span>搞笑</span>
+				<span>生活</span>
+				<span>游戏</span>
+
+				<span style="font-size:11px;margin-left:30px;">自媒体</span>
+				<span style="font-size:11px;">千凡</span>
+				<span style="font-size:11px;">会员</span>
+				<span style="font-size:11px;">课堂</span>
+				<span style="font-size:11px;">排行</span>
+				<span style="font-size:11px;">搜狐首页</span>
+				
+			</div>
+			
+			<hr style="border:1px #FF0000 solid;margin-top:50px;" />
+		
+		</div>
+		
+		<div class="small_nav_show"></div>
+	<!--site_head end-->
+
+	<!--site_middle start-->
+		<div class="site_middle">
+			<div class="middle_top_part">
+				<div class="top_part_left">
+					<div class="top_par_left_image"><img src="images/top_part_image1.jpg"></div>
+					<div class="top_part_left_words">
+						<div class="left_title">
+							<span style="font-size:17px;color:red;">英国体育场爆炸：至少19死50伤</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">热点&nbsp;|&nbsp;</span>朴槿惠今日公开庭审 与崔顺实同台受审</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">关注&nbsp;|&nbsp;</span>曼谷一家医院发生爆炸袭击 已致24人受伤</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">社会&nbsp;|&nbsp;</span>女子晚上喝水水杯爆裂 崩断门牙割破嘴唇</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">推荐&nbsp;|&nbsp;</span>《欢乐颂2》力荐洗衣液</span>
+						</div>
+						<div class="right_title">
+							<span style="font-size:17px;color:red;">刘洲成回应家暴：未花过前妻钱</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">娱乐&nbsp;|&nbsp;</span>张译：想当戛纳影帝 我爸妈看到会长寿</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">明星&nbsp;|&nbsp;</span>蔡康永导演处女作《吃吃的爱》献康熙粉</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">搞笑&nbsp;|&nbsp;</span>辣眼睛！和孩子一起玩的爸爸都这么奇葩</span>
+							<span style="margin-top:10px;"><span style="color:gray;float:left;">推荐&nbsp;|&nbsp;</span>我爱我家-宁静自曝曾遭弟弟暴打险失明</span>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="top_part_middle">
+					<img src="images/top_part_middle1.jpg" >
+					<span>郑嘉颖斥温兆伦导戏不专业</span>
+					<img src="images/top_part_middle2.jpg" style="margin-top:19px;">
+					<span>孔目扮女装催眠总探长</span>
+					<img src="images/top_part_middle3.jpg" style="margin-top:19px;">
+					<span>广西数人蒙面持枪超市扫射</span>
+				</div>
+				<div class="top_part_right">
+					<img src="images/top_part_right_image1.png">
+					<span style="color:gray;margin-top:15px;color:black;"><span style="color:gray;">推荐&nbsp;&nbsp;|&nbsp;&nbsp;</span>千帆直播招募游乐主播 边玩边赚钱!</span>
+					<span style="color:gray;margin-top:15px;color:black;"><span style="color:gray;">推荐&nbsp;&nbsp;|&nbsp;&nbsp;</span>剧组招聘内幕重重 千里眼卧底曝光</span>
+					<span style="color:gray;margin-top:15px;color:black;"><span style="color:gray;">推荐&nbsp;&nbsp;|&nbsp;&nbsp;</span>暴走人事部启动一级人才战略储备</span>
+					<span style="color:gray;margin-top:15px;color:black;"><span style="color:gray;">推荐&nbsp;&nbsp;|&nbsp;&nbsp;</span>宝宝呵护：你给宝宝的早教对了吗？</span>
+					<img src="images/top_part_right_image2.png" style="margin-top:20px;">
+				</div>
+			</div>
+			<!--个人中心 start-->
+			<div class="Personal_core">
+				<div class="Personal_core_left">
+					<div class="Personal_core_title">
+						<span style="font-size:22px;">个人中心</span>
+						<span style="font-size:14px;margin-left:30px;">猜你喜欢</span>
+						<span style="font-size:14px;margin-left:10px;">观看记录</span>
+						<span style="font-size:14px;margin-left:10px;">追剧提醒</span>
+						<span style="font-size:14px;margin-left:10px;">我的订阅</span>
+						<span style="font-size:12px;margin-left:300px;">换一换</span>
+					</div>
+					<div class="Personal_core_title_images">
+						<div class="Personal_core_title_images_one" style="float:left;margin-top:5px;">
+							<img src="images/gerenzhongxin1.jpg" >
+							<span>托马斯和他的朋友们比...</span>
+							<span style="font-size:10px;margin-top:5px;color;gray;">小寒游戏</span>
+						</div>
+						<div class="Personal_core_title_images_two" style="float:left;margin-left:20px;margin-top:5px;">
+							<img src="images/gerenzhongxin2.jpg">
+							<span>最让人搞不懂的片段?...</span>
+							<span style="font-size:10px;margin-top:5px;color;gray;">皮皮的犯二人生</span>
+						</div>
+						<div class="Personal_core_title_images_three" style="float:left;margin-left:20px;margin-top:5px;">
+							<img src="images/gerenzhongxin3.jpg">
+							<span>八路军团长与鬼子司令...</span>
+							<span style="font-size:10px;margin-top:5px;color;gray;">大话小崔</span>
+						</div>
+						<div class="Personal_core_title_images_four" style="float:left;margin-left:20px;margin-top:5px;">
+							<img src="images/gerenzhongxin4.jpg">
+							<span>女老师开家长会被小明...</span>
+							<span style="font-size:10px;margin-top:5px;color;gray;">青椒炒土豆泥</span>
+						</div>
+					</div>
+				</div>
+				<div class="Personal_core_title_images_right_part">
+					<div class="title_jingpin"><span >精品栏目</span></div>
+					<div class="Personal_icon">
+						<img src="images/iocn_image_1.jpg" >&nbsp;&nbsp;<span>奔放的小瓜瓜</span><span style="color:gray;margin-left:30px;">🌟05-23更新12集</span>
+						</div>
+					<div class="Personal_icon">
+						<img src="images/iocn_image_2.gif" >&nbsp;&nbsp;<span>小略周一贱</span><span style="color:gray;margin-left:30px;">🌟05-22更新66集</span></div>
+					<div class="Personal_icon">
+						<img src="images/iocn_image_3.jpg" >&nbsp;&nbsp;<span>《畅所欲言》</span><span style="color:gray;margin-left:30px;">🌟05-21更新337集</span></div>
+					<div class="Personal_icon">
+						<img src="images/iocn_image_4.jpg" >&nbsp;&nbsp;<span>QM工作室</span><span style="color:gray;margin-left:30px;">🌟05-21更新32集</span></div>
+					<div class="Personal_icon">
+						<img src="images/iocn_image_5.jpg" >&nbsp;&nbsp;<span>Lady聊聊时尚圈</span><span style="color:gray;margin-left:30px;">🌟05-19更新96集</span></div>
+
+				</div>
+			</div>
+			<!--个人中心 end-->
+
+			<!--电视剧 start-->
+
+			<div class="middle_tv_siers">
+				<div class="middle_tv_siers_content_left">
+					<div class="middle_tv_siers_content_left_title">
+						<span style="font-size:22px;">电视剧</span>
+						<span style="font-size:14px;margin-left:30px;">最新</span>
+						<span style="font-size:14px;margin-left:20px;">最热</span>
+						<span style="font-size:14px;margin-left:20px;">内地剧</span>
+						<span style="font-size:14px;margin-left:20px;">美剧</span>
+						<span style="font-size:14px;margin-left:20px;">日剧</span>
+						<span style="font-size:14px;margin-left:20px;">韩剧</span>
+						<span style="font-size:14px;margin-left:20px;">港剧</span>
+						<span style="font-size:14px;margin-left:20px;">更多</span>
+						<span style="font-size:12px;margin-left:200px;">更多</span>
+					</div>
+					<div class="middle_tv_siers_content_left_images">
+						<div class="left_images" style="margin-left:0px;"><img src="images/dianshiju1.jpg"><span class="big_title">欢乐颂</span><span class="small_title">看“五美”携男团集体撒糖</span></div>
+						<div class="left_images">
+							<img src="images/dianshiju2.jpg"><span class="big_title">择天记</span><span class="small_title">一群少年组团逆天改命的故事</span></div>
+						<div class="left_images">
+							<img src="images/dianshiju3.jpg"><span class="big_title">画心师</span><span class="small_title">和漂亮小姐姐一起打怪通关</span></div>
+						<div class="left_images">
+							<img src="images/dianshiju4.jpg"><span class="big_title">法医秦明</span><span class="small_title">不拿手术刀的裁缝不是好法医</span></div>
+						<div class="left_images" style="margin-left:0px;margin-top:20px;">
+							<img src="images/dianshiju5.jpg"><span class="big_title">被催眠的催眠师</span><span class="small_title">会催眠术的民国版“福尔摩斯”</span></div>
+						<div class="left_images" style="margin-top:20px;">
+							<img src="images/dianshiju6.jpg"><span class="big_title">神探狄仁杰4</span><span class="small_title">狄仁杰元芳华丽回归</span></div>
+						<div class="left_images" style="margin-top:20px;">
+							<img src="images/dianshiju7.jpg"><span class="big_title">降龙伏虎小济公2</span><span class="small_title">你是沉鱼落雁 我就是闭月羞花</span></div>
+						<div class="left_images" style="margin-top:20px;">
+							<img src="images/dianshiju8.jpg"><span class="big_title">SK-II惊艳时光，成就逆龄</span><span class="small_title">打造晶莹剔透美肌，你也可以</span></div>
+					</div>
+				</div>
+				<div class="middle_tv_siers_content_right">
+					<div class="tv_siers_content_right_big_title">
+							<span>电视剧排行</span>
+							<span style="margin-left:100px;font-size:12px;color:gray;">TOP100>></span>
+					</div>
+					<div class="tv_siers_content_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>欢乐颂2</span></div>
+						<div class="one_five"><img src="images/two.png"><span>择天记</span></div>
+						<div class="one_five"><img src="images/three.png"><span>画心师</span></div>
+						<div class="one_five"><img src="images/four.png"><span>人民的名义</span></div>
+						<div class="one_five"><img src="images/five.png"><span>被催眠的催...</span></div>
+						
+					</div>
+					<div class="tv_siers_content_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>远征！远征...</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>俺爹是卧底</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>铁血将军</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>降龙伏虎小济公</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>神探狄仁杰4</span></div>
+					</div>
+					<div class="tv_siers_content_right_bottom">
+						<div style="margin-left:0px;"><img src="images/dianshiju9.jpg"><span>电视剧周评</span><span style="font-size:12px;color:gray;">第六十八期</span></div>
+						<div><img src="images/dianshiju10.jpg"><span>极速前进</span><span style="font-size:12px;color:gray;">极速前进</span></div>
+						<div><img src="images/dianshiju11.jpg"><span>一周好莱坞</span><span style="font-size:12px;color:gray;">精彩盘点</span></div>
+						
+					</div>
+				</div>
+
+			</div>
+			<!--电视剧 end-->
+			<!--美剧 start	-->
+
+			<div class="middle_American_movie_tv">
+				<div class="middle_American_movie_tv_left">
+					<div class="middle_American_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">美剧</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>悬疑</span>
+						<span>喜剧</span>
+						<span>家庭</span>
+						<span>动作</span>
+						<span>言情</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_American_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/meiju1.jpg"><span>生活大爆炸 第9季</span><span class="small_title">The Big Bang Theory S09</span></div>
+						<div><img src="images/meiju2.jpg"><span>血族 第3季</span><span class="small_title">The Strain S03</span></div>
+						<div><img src="images/meiju3.jpg"><span>老妈 第3季</span><span class="small_title">Mom S3</span></div>
+						<div><img src="images/meiju4.jpg"><span>非常创业 第1季</span><span class="small_title">StartUp S01</span></div>
+						<div style="margin-left:0px;"><img src="images/meiju5.jpg"><span>胡迪尼与道尔</span><span class="small_title">Houdini and Doyle</span></div>
+						<div><img src="images/meiju6.jpg"><span>罪</span><span class="small_title">Guilt</span></div>
+						<div><img src="images/meiju7.jpg"><span>穿越时间线</span><span class="small_title">Timeless</span></div>
+						<div><img src="images/meiju8.jpg"><span>开荒岛民 第1季</span><span class="small_title">Wrecked S01</span></div>
+					</div>
+				</div>
+				<div class="middle_American_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">追剧课程表</span>
+					<div style="margin-left:0px;"><img src="images/meiju9.jpg"><span>嘻哈帝国</span><span>第1季</span></div>
+					<div><img src="images/meiju10.jpg"><span>至亲血统</span><span>第1季</span></div>
+					<div><img src="images/meiju11.jpg" style="width:70px;height:70px;"><span>国务卿女士</span><span>第1季</span></div>
+					<div style="margin-left:0px;"><img src="images/meiju12.jpg"><span>复仇</span><span>第4季</span></div>
+					<div><img src="images/meiju13.jpg"><span>童话镇</span><span>第4季</span></div>
+					<div><img src="images/meiju14.jpg"><span>王者归来</span><span>第2季</span></div>
+				</div>
+			</div>
+
+			<!--美剧 end-->
+			<!--韩剧 start-->
+			<div class="middle_korea_movie_tv">
+				<div class="middle_korea_movie_tv_left">
+					<div class="middle_korea_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">韩剧&日剧</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>悬疑</span>
+						<span>喜剧</span>
+						<span>家庭</span>
+						<span>动作</span>
+						<span>言情</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_korea_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/hanju1.jpg"><span>生活大爆炸 第9季</span><span class="small_title">The Big Bang Theory S09</span></div>
+						<div><img src="images/hanju2.jpg"><span>血族 第3季</span><span class="small_title">The Strain S03</span></div>
+						<div><img src="images/hanju3.jpg"><span>老妈 第3季</span><span class="small_title">Mom S3</span></div>
+						<div><img src="images/hanju4.jpg"><span>非常创业 第1季</span><span class="small_title">StartUp S01</span></div>
+						<div style="margin-left:0px;"><img src="images/hanju5.jpg"><span>胡迪尼与道尔</span><span class="small_title">Houdini and Doyle</span></div>
+						<div><img src="images/hanju6.jpg"><span>罪</span><span class="small_title">Guilt</span></div>
+						<div><img src="images/hanju7.jpg"><span>穿越时间线</span><span class="small_title">Timeless</span></div>
+						<div><img src="images/hanju8.jpg"><span>开荒岛民 第1季</span><span class="small_title">Wrecked S01</span></div>
+					</div>
+				</div>
+				<div class="middle_korea_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">韩剧排行</span>
+					<div class="middle_korea_movie_tv_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>心里的声音</span></div>
+						<div class="one_five"><img src="images/two.png"><span>Healer</span></div>
+						<div class="one_five"><img src="images/three.png"><span>高品格单恋</span></div>
+						<div class="one_five"><img src="images/four.png"><span>扑通扑通lo...</span></div>
+						<div class="one_five"><img src="images/five.png"><span>陷入纯情</span></div>
+					</div>
+					<div class="middle_korea_movie_tv_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>夜行书生</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>制片人</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>评价女王</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>花样排球第...</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>无理的前进</span></div>
+					</div>
+					<div class="middle_korea_movie_tv_right_bottom">
+						<div style="margin-left:0px;"><img src="images/hanju9.jpg"><span>电视剧周评</span><span style="font-size:12px;color:gray;">第六十八期</span></div>
+						<div><img src="images/hanju10.jpg"><span>极速前进</span><span style="font-size:12px;color:gray;">极速前进</span></div>
+						<div><img src="images/hanju11.jpg"><span>一周好莱坞</span><span style="font-size:12px;color:gray;">精彩盘点</span></div>
+					</div>
+				</div>
+			</div>
+			<!--韩剧 end-->
+
+
+			<!--广告 start-->
+			<div class="middle_ads_one">
+				<img src="images/ads_one.jpg">
+			</div>
+			<!--广告 end-->
+
+			<!--动漫 start-->
+			<div class="middle_dongman_movie_tv">
+				<div class="middle_dongman_movie_tv_left">
+					<div class="middle_dongman_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">动漫</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>校园</span>
+						<span>冒险</span>
+						<span>魔幻</span>
+						<span>日本</span>
+						<span>内地</span>
+						<span>欧美</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_dongman_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/dongman1.jpg"><span>熊熊乐园</span><span class="small_title">T熊强前传激萌童年冒险</span></div>
+						<div><img src="images/dongman2.jpg"><span>爆裂兄弟2</span><span class="small_title">夺晶争霸 热血出击!</span></div>
+						<div><img src="images/dongman3.jpg"><span>妖精的尾巴</span><span class="small_title">Let's go!妖尾激燃复活</span></div>
+						<div><img src="images/dongman4.jpg"><span>约会次元咖</span><span class="small_title">番外篇:导演编剧脑洞接龙</span></div>
+						<div style="margin-left:0px;"><img src="images/dongman5.jpg"><span>狐狸酱游漫展</span><span class="small_title">少女勇闯阴阳师神界</span></div>
+						<div><img src="images/dongman6.jpg"><span>狐说狐有理</span><span class="small_title">超凡特摄英雄传</span></div>
+						<div><img src="images/dongman7.jpg"><span>狐妖小红娘</span><span class="small_title">狗粮虽好 可不要贪杯噢</span></div>
+						<div><img src="images/dongman8.jpg"><span>银之守墓人(中文版)</span><span class="small_title">这游戏没你想得那么简单!</span></div>
+					</div>
+				</div>
+				<div class="middle_dongman_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">动慢排行</span>
+					<div class="middle_dongman_movie_tv_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>熊熊乐园</span></div>
+						<div class="one_five"><img src="images/two.png"><span>粉红猪小妹</span></div>
+						<div class="one_five"><img src="images/three.png"><span>粉红猪小妹...</span></div>
+						<div class="one_five"><img src="images/four.png"><span>妖精的尾巴</span></div>
+						<div class="one_five"><img src="images/five.png"><span>木奇灵2圣天...</span></div>
+					</div>
+					<div class="middle_dongman_movie_tv_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>超级飞侠3</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>墓王之王</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>巴啦啦小魔..</span></div>
+					</div>
+					<div class="middle_dongman_movie_tv_right_bottom">
+						<div style="margin-left:0px;"><img src="images/dongman9.jpg"><span>妖精的尾巴</span><span style="font-size:12px;color:gray;">强势回归</span></div>
+						<div><img src="images/dongman10.jpg"><span>精灵宝可梦</span><span style="font-size:12px;color:gray;">冒险经典</span></div>
+						<div><img src="images/dongman11.jpg"><span>全职猎人</span><span style="font-size:12px;color:gray;">挥泪完结</span></div>
+					</div>
+				</div>
+			</div>
+
+			<!--动漫 end-->
+
+			<!--搜狐出品 start-->
+			<div class="middle_souhuchupin_movie_tv">
+				<div class="middle_souhuchupin_movie_tv_left">
+					<div class="middle_souhuchupin_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">搜狐出品</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>校园</span>
+						<span>冒险</span>
+						<span>魔幻</span>
+						<span>日本</span>
+						<span>内地</span>
+						<span>欧美</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_souhuchupin_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/souhuchupin1.jpg"><span>寻阁传</span><span class="small_title">长欢寻水胆遭暗算入狱</span></div>
+						<div><img src="images/souhuchupin2.jpg"><span>无心法师2</span><span class="small_title">韩东君暖男本色不改</span></div>
+						<div><img src="images/souhuchupin3.jpg"><span>林子大了</span><span class="small_title">灵魂歌者郭麒麟太洗脑</span></div>
+						<div><img src="images/souhuchupin4.jpg"><span>谁寄锦书来</span><span class="small_title">贾阳周瑶瑶暧昧升级中</span></div>
+						<div style="margin-left:0px;"><img src="images/souhuchupin5.jpg"><span>法医秦明</span><span class="small_title">秦明接神秘人电话</span></div>
+						<div><img src="images/souhuchupin6.jpg"><span>降龙伏虎小济公2</span><span class="small_title">疯癫济公终现身</span></div>
+						<div><img src="images/souhuchupin7.jpg"><span>画心师</span><span class="small_title">祝绪丹大骂熊梓淇负心汉</span></div>
+						<div><img src="images/souhuchupin8.jpg"><span>被催眠的催眠师</span><span class="small_title">孔目男扮女装催眠总探长</span></div>
+					</div>
+				</div>
+				<div class="middle_souhuchupin_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">动慢排行</span>
+					<div class="middle_souhuchupin_movie_tv_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>熊熊乐园</span></div>
+						<div class="one_five"><img src="images/two.png"><span>粉红猪小妹</span></div>
+						<div class="one_five"><img src="images/three.png"><span>粉红猪小妹...</span></div>
+						<div class="one_five"><img src="images/four.png"><span>妖精的尾巴</span></div>
+						<div class="one_five"><img src="images/five.png"><span>木奇灵2圣天...</span></div>
+					</div>
+					<div class="middle_souhuchupin_movie_tv_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>超级飞侠3</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>墓王之王</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>巴啦啦小魔..</span></div>
+					</div>
+					<div class="middle_souhuchupin_movie_tv_right_bottom">
+						<div style="margin-left:0px;"><img src="images/dongman9.jpg"><span>妖精的尾巴</span><span style="font-size:12px;color:gray;">强势回归</span></div>
+						<div><img src="images/dongman10.jpg"><span>精灵宝可梦</span><span style="font-size:12px;color:gray;">冒险经典</span></div>
+						<div><img src="images/dongman11.jpg"><span>全职猎人</span><span style="font-size:12px;color:gray;">挥泪完结</span></div>
+					</div>
+				</div>
+			</div>
+
+			<!--搜狐出品 end-->
+
+			<!--综艺 start-->
+			<div class="middle_zongyi_movie_tv">
+				<div class="middle_zongyi_movie_tv_left">
+					<div class="middle_zongyi_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">综艺</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>校园</span>
+						<span>冒险</span>
+						<span>魔幻</span>
+						<span>日本</span>
+						<span>内地</span>
+						<span>欧美</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_zongyi_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/zhongyi1.jpg"><span>熊熊乐园</span><span class="small_title">T熊强前传激萌童年冒险</span></div>
+						<div><img src="images/zhongyi2.jpg"><span>爆裂兄弟2</span><span class="small_title">夺晶争霸 热血出击!</span></div>
+						<div><img src="images/zhongyi3.jpg"><span>妖精的尾巴</span><span class="small_title">Let's go!妖尾激燃复活</span></div>
+						<div><img src="images/zhongyi4.jpg"><span>约会次元咖</span><span class="small_title">番外篇:导演编剧脑洞接龙</span></div>
+						<div style="margin-left:0px;"><img src="images/zhongyi5.jpg"><span>狐狸酱游漫展</span><span class="small_title">少女勇闯阴阳师神界</span></div>
+						<div><img src="images/zhongyi6.jpg"><span>狐说狐有理</span><span class="small_title">超凡特摄英雄传</span></div>
+						<div><img src="images/zhongyi7.jpg"><span>狐妖小红娘</span><span class="small_title">狗粮虽好 可不要贪杯噢</span></div>
+						<div><img src="images/zhongyi8.jpg"><span>银之守墓人(中文版)</span><span class="small_title">这游戏没你想得那么简单!</span></div>
+					</div>
+				</div>
+				<div class="middle_zongyi_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">动慢排行</span>
+					<div class="middle_zongyi_movie_tv_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>熊熊乐园</span></div>
+						<div class="one_five"><img src="images/two.png"><span>粉红猪小妹</span></div>
+						<div class="one_five"><img src="images/three.png"><span>粉红猪小妹...</span></div>
+						<div class="one_five"><img src="images/four.png"><span>妖精的尾巴</span></div>
+						<div class="one_five"><img src="images/five.png"><span>木奇灵2圣天...</span></div>
+					</div>
+					<div class="middle_zongyi_movie_tv_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>超级飞侠3</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>墓王之王</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>巴啦啦小魔..</span></div>
+					</div>
+					<div class="middle_zongyi_movie_tv_right_bottom">
+						<div style="margin-left:0px;"><img src="images/dongman9.jpg"><span>妖精的尾巴</span><span style="font-size:12px;color:gray;">强势回归</span></div>
+						<div><img src="images/dongman10.jpg"><span>精灵宝可梦</span><span style="font-size:12px;color:gray;">冒险经典</span></div>
+						<div><img src="images/dongman11.jpg"><span>全职猎人</span><span style="font-size:12px;color:gray;">挥泪完结</span></div>
+					</div>
+				</div>
+			</div>
+
+			<!--综艺 end-->
+
+			<!--广告ads start-->
+			<div class="middle_ads_one">
+				<img src="images/ads_one.jpg">
+			</div>
+			<!--广告ads end-->
+
+			<!--体育 start-->
+			<div class="middle_sport_movie_tv">
+				<div class="middle_sport_movie_tv_left">
+					<div class="middle_sport_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">体育</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>校园</span>
+						<span>冒险</span>
+						<span>魔幻</span>
+						<span>日本</span>
+						<span>内地</span>
+						<span>欧美</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_sport_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/tiyu1.jpg"><span>熊熊乐园</span><span class="small_title">T熊强前传激萌童年冒险</span></div>
+						<div><img src="images/tiyu2.jpg"><span>爆裂兄弟2</span><span class="small_title">夺晶争霸 热血出击!</span></div>
+						<div><img src="images/tiyu3.jpg"><span>妖精的尾巴</span><span class="small_title">Let's go!妖尾激燃复活</span></div>
+						<div><img src="images/tiyu4.jpg"><span>约会次元咖</span><span class="small_title">番外篇:导演编剧脑洞接龙</span></div>
+						<div style="margin-left:0px;"><img src="images/tiyu5.jpg"><span>狐狸酱游漫展</span><span class="small_title">少女勇闯阴阳师神界</span></div>
+						<div><img src="images/tiyu6.jpg"><span>狐说狐有理</span><span class="small_title">超凡特摄英雄传</span></div>
+						<div><img src="images/tiyu7.jpg"><span>狐妖小红娘</span><span class="small_title">狗粮虽好 可不要贪杯噢</span></div>
+						<div><img src="images/tiyu8.jpg"><span>银之守墓人(中文版)</span><span class="small_title">这游戏没你想得那么简单!</span></div>
+					</div>
+				</div>
+				<div class="middle_sport_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">动慢排行</span>
+					<div class="middle_sport_movie_tv_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>熊熊乐园</span></div>
+						<div class="one_five"><img src="images/two.png"><span>粉红猪小妹</span></div>
+						<div class="one_five"><img src="images/three.png"><span>粉红猪小妹...</span></div>
+						<div class="one_five"><img src="images/four.png"><span>妖精的尾巴</span></div>
+						<div class="one_five"><img src="images/five.png"><span>木奇灵2圣天...</span></div>
+					</div>
+					<div class="middle_sport_movie_tv_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>超级飞侠3</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>墓王之王</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>巴啦啦小魔..</span></div>
+					</div>
+					<div class="middle_sport_movie_tv_right_bottom">
+						<div style="margin-left:0px;"><img src="images/dongman9.jpg"><span>妖精的尾巴</span><span style="font-size:12px;color:gray;">强势回归</span></div>
+						<div><img src="images/dongman10.jpg"><span>精灵宝可梦</span><span style="font-size:12px;color:gray;">冒险经典</span></div>
+						<div><img src="images/dongman11.jpg"><span>全职猎人</span><span style="font-size:12px;color:gray;">挥泪完结</span></div>
+					</div>
+				</div>
+			</div>
+			<!--体育 end-->
+
+			<!--电影 start-->
+			<div class="middle_dianying_movie_tv">
+				<div class="middle_dianying_movie_tv_left">
+					<div class="middle_dianying_movie_tv_left_title">
+						<span style="margin-left:0px;font-size:22px;">电影</span>
+						<span style="margin-left:30px;">最新</span>
+						<span>最热</span>
+						<span>校园</span>
+						<span>冒险</span>
+						<span>魔幻</span>
+						<span>日本</span>
+						<span>内地</span>
+						<span>欧美</span>
+						<span>更多</span>
+					</div>
+					<div class="middle_dianying_movie_tv_left_images">
+						<div style="margin-left:0px;"><img src="images/dianying1.jpg"><span>熊熊乐园</span><span class="small_title">T熊强前传激萌童年冒险</span></div>
+						<div><img src="images/dianying2.jpg"><span>爆裂兄弟2</span><span class="small_title">夺晶争霸 热血出击!</span></div>
+						<div><img src="images/dianying3.jpg"><span>妖精的尾巴</span><span class="small_title">Let's go!妖尾激燃复活</span></div>
+						<div><img src="images/dianying4.jpg"><span>约会次元咖</span><span class="small_title">番外篇:导演编剧脑洞接龙</span></div>
+						<div style="margin-left:0px;"><img src="images/dianying5.jpg"><span>狐狸酱游漫展</span><span class="small_title">少女勇闯阴阳师神界</span></div>
+						<div><img src="images/dianying6.jpg"><span>狐说狐有理</span><span class="small_title">超凡特摄英雄传</span></div>
+						<div><img src="images/dianying7.jpg"><span>狐妖小红娘</span><span class="small_title">狗粮虽好 可不要贪杯噢</span></div>
+						<div><img src="images/dianying8.jpg"><span>银之守墓人(中文版)</span><span class="small_title">这游戏没你想得那么简单!</span></div>
+					</div>
+				</div>
+				<div class="middle_dianying_movie_tv_right">
+					<span style="margin-top:35px;font-size:14px;">动慢排行</span>
+					<div class="middle_dianying_movie_tv_right_one_five">
+						<div class="one_five" style="margin-top:10px;"><img src="images/one.png"><span>熊熊乐园</span></div>
+						<div class="one_five"><img src="images/two.png"><span>粉红猪小妹</span></div>
+						<div class="one_five"><img src="images/three.png"><span>粉红猪小妹...</span></div>
+						<div class="one_five"><img src="images/four.png"><span>妖精的尾巴</span></div>
+						<div class="one_five"><img src="images/five.png"><span>木奇灵2圣天...</span></div>
+					</div>
+					<div class="middle_dianying_movie_tv_right_six_ten">
+						<div class="six_ten" style="margin-top:10px;"><img src="images/six.png"><span>超级飞侠3</span></div>
+						<div class="six_ten"><img src="images/seven.png"><span>墓王之王</span></div>
+						<div class="six_ten"><img src="images/eight.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/night.png"><span>粉红猪小妹...</span></div>
+						<div class="six_ten"><img src="images/ten.png"><span>巴啦啦小魔..</span></div>
+					</div>
+					<div class="middle_dianying_movie_tv_right_bottom">
+						<div style="margin-left:0px;"><img src="images/dongman9.jpg"><span>妖精的尾巴</span><span style="font-size:12px;color:gray;">强势回归</span></div>
+						<div><img src="images/dongman10.jpg"><span>精灵宝可梦</span><span style="font-size:12px;color:gray;">冒险经典</span></div>
+						<div><img src="images/dongman11.jpg"><span>全职猎人</span><span style="font-size:12px;color:gray;">挥泪完结</span></div>
+					</div>
+				</div>
+			</div>
+			<!--电影 end-->
+
+			<!--音乐 start-->
+			<!--音乐 end-->
+
+			<!--纪录片 start-->
+			<!--纪录片 end-->
+
+			<!--娱乐播报 start-->
+			<!--娱乐播报 end-->
+
+			<!--广告ads start-->
+			<!--广告ads end-->
+
+			<!--自媒体 start-->
+			<!--自媒体 end-->
+
+			<!--搞笑 start-->
+			<!--搞笑 end-->
+
+			<!--生活 start-->
+			<!--生活 end-->
+
+			<!--游戏 start-->
+			<!--游戏 end-->
+
+			<!--教育 start-->
+			<!--教育 end-->
+
+			<!--汽车 start-->
+			<!--汽车 end-->
+
+			<!--美女直播 start-->
+			<!--搜狐视频 end-->
+
+			<!--搜狐课堂 start-->
+			<!--搜狐课堂 end-->
+
+			<!--卫视强档 start-->
+			<!--卫视强档 end-->
+
+			<!--广告ads start-->
+
+
+			<!--广告ads end-->
+
+
+		</div>
+
+	<!--site_middle end-->
+
+	<!--site_bottom start-->
+		<div class="site_bottom">
+			<div class="bottom_search">
+				<div class="bottom_serch_tool">
+					<div class="bottom_search_pic">
+						<div class="bottom_search_pic_img">
+						<img src="images/search.png" style="width:35px;height:35px;margin-left:15px;margin-top:3px;">
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_detail">
+				<div class="bottom_detail_content"> 
+					<div style="margin-left:130px;">
+							<span class="bottom_detail_content_big_title">热门频道</span>
+							<span>电视剧 综艺 娱乐</span>
+							<span>纪录片 电影 动漫</span>
+							<span>新闻 体育 直播</span>
+						</div>
+					<div style="margin-left:40px;">
+							<span class="bottom_detail_content_big_title">自媒体</span>
+							<span>搞笑 生活 游戏</span>
+							<span>教育 汽车 科技</span>
+							<span>美妆 旅游 出品人</span>
+						</div>
+					<div style="margin-left:30px;">
+							<span class="bottom_detail_content_big_title">会员</span>
+							<span>黄金会员</span>
+							<span>白银会员</span>
+							<span>帮助</span>
+						</div>
+					<div>
+							<span class="bottom_detail_content_big_title">服务</span>
+							<span>网站联盟</span>
+							<span>关于我们</span>
+							<span>版权投诉</span></div>
+					<div style="border-right: 1px dashed #d0d0d0;width:120px;">
+							<span class="bottom_detail_content_big_title">软件/智能硬件</span>
+							<span>移动客户端</span>
+							<span>搜狐影音</span>
+							<span>搜狐视频TV版</span>
+						</div>
+					<div style="width:180px;font-size:12px;">
+							<span>不良信息举报中心</span>
+							<span>北京互联网举报中心</span>
+							<span>网络110报警服务</span>
+							<span>北京12318文化市场举报热线</span>
+						</div>
+				</div>
+			</div>
+			<div class="bottom_copyright">
+				<div style="margin-top:20px;"><span>搜狗输入法 &nbsp;&nbsp;- &nbsp;&nbsp;支付中心 &nbsp;&nbsp;- &nbsp;&nbsp;搜狐招聘&nbsp;&nbsp; -&nbsp;&nbsp; 广告服务 &nbsp;&nbsp;- &nbsp;&nbsp;客服中心 &nbsp;&nbsp;- &nbsp;&nbsp;联系方式 &nbsp;&nbsp;- &nbsp;&nbsp;保护隐私权 &nbsp;&nbsp;- &nbsp;&nbsp;About SOHU &nbsp;&nbsp;-&nbsp;&nbsp; 公司介绍 </span></div>
+				<div><span style="color:gray;">Copyright © 2017 Sohu.com Inc. All Rights Reserved. 飞狐信息技术(天津)有限公司 </span></div>
+				<div><span><span style="color:gray;">请仔细阅读</span>&nbsp;&nbsp;版权声明 、反盗版和反盗链权利声明 &nbsp;&nbsp;<span style="color:gray;">举报邮箱：</span>jubao@contact.sohu.com</span></div>
+			</div>
+		</div>
+
+	<!--site_bottom end-->
+</body>
+</html>
